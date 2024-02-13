@@ -1,0 +1,30 @@
+/* Footer.css */
+.app-footer {
+    background-color: #f8f9fa;
+    padding:  20px  0;
+    text-align: center;
+  }
+  
+  .app-footer p {
+    margin-bottom:  10px;
+  }
+  
+  .app-footer nav ul {
+    list-style-type: none;
+    padding:  0;
+  }
+  
+  .app-footer nav ul li {
+    display: inline;
+    margin-right:  15px;
+  }
+  
+  .app-footer nav ul li a {
+    color: #6c757d;
+    text-decoration: none;
+  }
+  
+  .app-footer nav ul li a:hover {
+    color: #343a40;
+  }
+  
