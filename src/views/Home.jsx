@@ -1,10 +1,11 @@
+import ListingCard from "../components/listingCard/ListingCard";
 
 const Home = () => {
   return (
     <div>
-      home
+      <ListingCard />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
