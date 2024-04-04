@@ -18,6 +18,9 @@ import image6 from "../../assets/listings/thai-3.webp";
 import image7 from "../../assets/listings/indo-1.webp";
 import image8 from "../../assets/listings/indo-2.webp";
 import image9 from "../../assets/listings/indo-3.webp";
+import image10 from "../../assets/listings/esp-1.webp";
+import image11 from "../../assets/listings/esp-2.webp";
+import image12 from "../../assets/listings/esp-3.webp";
 
 const ListingCard = () => {
   return (
@@ -94,18 +97,18 @@ const ListingCard = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={image1} />
+          <img src={image10} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image2} />
+          <img src={image11} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image3} />
+          <img src={image12} />
         </SwiperSlide>
       </Swiper>
-      <h2>Condo in Paris</h2>
-      <p>Dedicated Worksapce</p>
-      <p>$1800 month</p>
+      <h2>Cave in Los Balcones, Spain</h2>
+      <p>Cave Granado. Guadix. Granada</p>
+      <p>$1600 month</p>
 
       <Swiper
         pagination={{
