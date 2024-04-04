@@ -4,8 +4,9 @@ const Footer = () => {
   return ( 
   <div className="footer">
     <div className="container">
+    <h1>Roamscape</h1>
+    <div className="footer-content">
       <div className="aboutUs">
-        <h1>Roamscape</h1>
         <h3>About Us</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper augue non neque congue, nec fermentum nunc posuere.</p>
         <div className="social_media_icons">
@@ -39,6 +40,7 @@ const Footer = () => {
         <i className="ri-mail-fill"></i>
         roamscape@gmail.com
         </p>
+        </div>
       </div>
     </div>
   </div>

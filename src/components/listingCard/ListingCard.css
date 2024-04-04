@@ -6,7 +6,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: red;
+  background:transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,7 @@
   width: 100%;
   height: 100%;
   border-radius: 2rem;
+}
+.listingCard{
+  max-width: 450px;
 }
