@@ -21,6 +21,9 @@ import image9 from "../../assets/listings/indo-3.webp";
 import image10 from "../../assets/listings/esp-1.webp";
 import image11 from "../../assets/listings/esp-2.webp";
 import image12 from "../../assets/listings/esp-3.webp";
+import image13 from "../../assets/listings/ind-1.webp";
+import image14 from "../../assets/listings/ind-2.webp";
+import image15 from "../../assets/listings/ind-3.webp";
 
 const ListingCard = () => {
   return (
@@ -118,18 +121,18 @@ const ListingCard = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={image1} />
+          <img src={image13} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image2} />
+          <img src={image14} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image3} />
+          <img src={image15} />
         </SwiperSlide>
       </Swiper>
-      <h2>Condo in Paris</h2>
-      <p>Dedicated Worksapce</p>
-      <p>$1800 month</p>
+      <h2>Room in Kalimpong, India</h2>
+      <p>Cozy bedroom-TV/Wi-Fi & mountain view</p>
+      <p>$1200 month</p>
 
       <Swiper
         pagination={{
