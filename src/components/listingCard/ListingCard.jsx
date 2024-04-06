@@ -1,4 +1,5 @@
 import "./ListingCard.css";
+import { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,79 +10,75 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-import image1 from "../../assets/listings/paris-1.webp";
-import image2 from "../../assets/listings/paris-2.webp";
-import image3 from "../../assets/listings/paris-3.webp";
-import image4 from "../../assets/listings/thai-1.webp";
-import image5 from "../../assets/listings/thai-2.webp";
-import image6 from "../../assets/listings/thai-3.webp";
-import image7 from "../../assets/listings/indo-1.webp";
-import image8 from "../../assets/listings/indo-2.webp";
-import image9 from "../../assets/listings/indo-3.webp";
-import image10 from "../../assets/listings/esp-1.webp";
-import image11 from "../../assets/listings/esp-2.webp";
-import image12 from "../../assets/listings/esp-3.webp";
-import image13 from "../../assets/listings/ind-1.webp";
-import image14 from "../../assets/listings/ind-2.webp";
-import image15 from "../../assets/listings/ind-3.webp";
-import image16 from "../../assets/listings/Brazil-1.webp";
-import image17 from "../../assets/listings/Brazil-2.webp";
-import image18 from "../../assets/listings/Brazil-3.webp";
-import image19 from "../../assets/listings/jam-1.webp";
-import image20 from "../../assets/listings/jam-2.webp";
-import image21 from "../../assets/listings/jam-3.webp";
-import image22 from "../../assets/listings/jor-1.webp";
-import image23 from "../../assets/listings/jor-2.webp";
-import image24 from "../../assets/listings/jor-3.webp";
-import image25 from "../../assets/listings/geo-1.webp";
-import image26 from "../../assets/listings/geo-2.webp";
-import image27 from "../../assets/listings/geo-3.webp";
+// import image4 from "../../assets/listings/thai-1.webp";
+// import image5 from "../../assets/listings/thai-2.webp";
+// import image6 from "../../assets/listings/thai-3.webp";
+// import image7 from "../../assets/listings/indo-1.webp";
+// import image8 from "../../assets/listings/indo-2.webp";
+// import image9 from "../../assets/listings/indo-3.webp";
+// import image10 from "../../assets/listings/esp-1.webp";
+// import image11 from "../../assets/listings/esp-2.webp";
+// import image12 from "../../assets/listings/esp-3.webp";
+// import image13 from "../../assets/listings/ind-1.webp";
+// import image14 from "../../assets/listings/ind-2.webp";
+// import image15 from "../../assets/listings/ind-3.webp";
+// import image16 from "../../assets/listings/Brazil-1.webp";
+// import image17 from "../../assets/listings/Brazil-2.webp";
+// import image18 from "../../assets/listings/Brazil-3.webp";
+// import image19 from "../../assets/listings/jam-1.webp";
+// import image20 from "../../assets/listings/jam-2.webp";
+// import image21 from "../../assets/listings/jam-3.webp";
+// import image22 from "../../assets/listings/jor-1.webp";
+// import image23 from "../../assets/listings/jor-2.webp";
+// import image24 from "../../assets/listings/jor-3.webp";
+// import image25 from "../../assets/listings/geo-1.webp";
+// import image26 from "../../assets/listings/geo-2.webp";
+// import image27 from "../../assets/listings/geo-3.webp";
 
 const ListingCard = () => {
-  return (
-    <div className="listingCard">
-      <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={image1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} />
-        </SwiperSlide>
-      </Swiper>
-      <h2>Condo in Paris</h2>
-      <p>Dedicated Worksapce</p>
-      <p>$1800 month</p>
+  const [listings, setListings] = useState([]);
 
+  useEffect(() => {
+    const fetchListings = async () => {
+      try {
+        const response = await fetch("http://localhost:4000/api/v1/listings");
+        const data = await response.json();
+        setListings(data);
+      } catch (error) {
+        console.error("Error fetching listings:", error);
+      }
+    };
 
-      <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={image4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image6} />
-        </SwiperSlide>
-      </Swiper>
-      <h2>Chang Mai, Thailand</h2>
-      <p>Entire villa with a pool </p>
-      <p>$1400 month</p>
+    fetchListings();
+  }, []);
+  console.log(listings);
+
+  // return (
+  //   <div className="listingCard">
+
+  {
+    /* <div>
+        <Swiper
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={image4} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={image5} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={image6} />
+          </SwiperSlide>
+        </Swiper>
+        <h2>Chang Mai, Thailand</h2>
+        <p>Entire villa with a pool </p>
+        <p>$1400 month</p>
+      </div>
 
       <Swiper
         pagination={{
@@ -228,8 +225,46 @@ const ListingCard = () => {
       </Swiper>
       <h2>Entire cabin in Saguramo, Georgia</h2>
       <p>Amazing 2 bedroom Cottage with Jacuzzi</p>
-      <p>$1000 month</p>
+      <p>$1000 month</p> */
+  }
+  {
+    /* </div>
+  );
+}; */
+  }
 
+  return (
+    <div className="listingsContainer">
+      {listings.map((listing) => (
+        <div key={listing._id} className="listingCard">
+          <Swiper
+            pagination={{ dynamicBullets: true }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {listing.photo.map((photo, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={photo}
+                  alt={`Listing ${listing._id} slide ${index + 1}`}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="listingDetails">
+            <h4>
+              <i className="ri-map-pin-2-line"></i> {listing.city}
+            </h4>
+            <h2>{listing.title}</h2>
+            <span>${listing.price} month</span>
+            <div className="btn-group">
+              <button>
+                <a href="/details">Click for details</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

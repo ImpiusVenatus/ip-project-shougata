@@ -1,9 +1,9 @@
-import ListingCard from "../components/listingCard/ListingCard";
+import Listings from "../components/listingCard/Listings";
 
 const Home = () => {
   return (
     <div>
-      <ListingCard />
+      <Listings />
     </div>
   );
 };
