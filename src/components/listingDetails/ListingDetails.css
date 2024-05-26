@@ -1,0 +1,195 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.listing-details {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-content {
+  width: 70%;
+}
+
+.house-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.house-subtitle,
+.house-info {
+  text-align: left;
+  color: #777;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.house-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.house-images img {
+  width: 45%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.house-details-section {
+  margin-bottom: 40px;
+}
+
+.house-details-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.house-details-section p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.house-testimonials {
+  margin-bottom: 40px;
+}
+
+.house-testimonials h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.house-testimonials .testimonial {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.house-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.host-details {
+  width: 75%;
+}
+
+.booking-form-card {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.booking-form-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-form-card form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.booking-form-card form input[type="date"],
+.booking-form-card form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #e0e6ed;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.booking-form-card form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.booking-form-card form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.house-facilities {
+  width: 100%;
+}
+
+.house-facilities h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.house-facilities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.house-facilities ul li {
+  padding: 5px 0;
+  background-color: #f4f4f4;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.things-to-know {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.rules-safety,
+.cancellation-policy {
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.rules-safety h3,
+.cancellation-policy h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.rules-safety ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rules-safety ul li {
+  padding: 5px 0;
+  color: #777;
+}
+
+.cancellation-policy p {
+  color: #777;
+  margin-bottom: 20px;
+}

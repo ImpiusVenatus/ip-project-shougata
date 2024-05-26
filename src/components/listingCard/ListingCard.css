@@ -1,20 +1,20 @@
 .listingsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 60px;
   padding: 20px 100px;
 }
 
 .listingCard {
   background-color: #f8f8f8;
   border-radius: 10px;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .listingCard:hover button {
-  transform: scale(1.1);
+  transform: translateX(10px);
   transition: 0.3s ease-in-out;
 }
 
@@ -56,7 +56,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.listingDetails button:hover a {
+.listingDetails button:hover {
   color: #fff;
 }
 
